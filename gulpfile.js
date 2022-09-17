@@ -49,7 +49,7 @@ function images() {
 }
 
 function scripts() {
-  return src(["node_modules/jquery/dist/jquery.js", "src/js/main.js"])
+  return src(["src/js/main.js", "src/js/main.js"])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("src/js"))
@@ -60,7 +60,6 @@ function build() {
   return src(
     [
       "src/css/style.min.css",
-      "src/fonts/**/*",
       "src/js/main.min.js",
       "src/*.html",
     ],

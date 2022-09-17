@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jfilya/zoo.git"
+    "url": "https://github.com/jfilya/zoo.git"
   },
   "author": "Julia Filippova",
   "license": "ISC",
@@ -18,11 +18,11 @@
   "homepage": "https://github.com/jfilya/zoo#readme",
   "devDependencies": {
     "browser-sync": "^2.27.10",
-    "del": "^7.0.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^8.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify-es": "^3.0.0",
     "i": "^0.3.7",
