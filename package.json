@@ -1,0 +1,32 @@
+{
+  "name": "zoo",
+  "version": "1.0.0",
+  "description": "* Верска по макету [Figma](https://www.figma.com/file/KQCnifSfIXHCiDxzem3q7f/online-zoo-3-weeks) \r * Верстка адаптивная, минимальный размер экрана 320px\r * Используется сборщик проектов Gulp\r * Используется препроцессор SCSS\r * Используется расширение [PerfectPixel для Google Chrome](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)\r * Весь дополнительный функционал написан на чистом JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfilya/zoo.git"
+  },
+  "author": "Julia Filippova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfilya/zoo/issues"
+  },
+  "homepage": "https://github.com/jfilya/zoo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "i": "^0.3.7",
+    "npm": "^8.19.2",
+    "sass": "^1.54.9"
+  }
+}
