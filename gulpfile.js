@@ -7,6 +7,18 @@ const imagemin = require("gulp-imagemin");
 const del = require("del");
 const sync = require("browser-sync").create();
 
+const ts = require('gulp-typescript');
+ 
+function scripts() {
+  const tsResult = src('src/**/*.ts')
+    .pipe(ts({
+        noImplicitAny: true,
+        out: 'main.js'
+      }))
+  return tsResult.js.pipe(dest('src/js'))
+};
+
+
 function browserSync() {
   sync.init({
     server: {
@@ -48,13 +60,6 @@ function images() {
     .pipe(dest("dist/img"));
 }
 
-function scripts() {
-  return src(["src/js/main.js", "src/js/main.js"])
-    .pipe(concat("main.min.js"))
-    .pipe(uglify())
-    .pipe(dest("src/js"))
-    .pipe(sync.stream());
-}
 
 function build() {
   return src(
