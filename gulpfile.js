@@ -13,9 +13,12 @@ function scripts() {
   const tsResult = src('src/**/*.ts')
     .pipe(ts({
         noImplicitAny: true,
-        out: 'main.js'
       }))
-  return tsResult.js.pipe(dest('src/js'))
+    
+  return tsResult.js.pipe(concat("main.min.js"))
+  .pipe(uglify())
+  .pipe(dest('src/js'))
+  .pipe(sync.stream());
 };
 
 
@@ -28,7 +31,7 @@ function browserSync() {
 }
 
 function styles() {
-  return src("src/scss/style.scss")
+  return src("src/scss/**/*.scss")
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(concat("style.min.css"))
     .pipe(
@@ -59,6 +62,7 @@ function images() {
     )
     .pipe(dest("dist/img"));
 }
+
 
 
 function build() {
