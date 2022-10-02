@@ -187,11 +187,10 @@
   }
 }
 
-@media screen and (max-width: 420px) {
-}
 
 @media screen and (max-width: 375px) {
-}
-
-@media screen and (max-width: 320px) {
+  .head-background {
+    background-position: center 33px;
+    background-size: 120%;
+  }
 }
