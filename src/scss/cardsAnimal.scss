@@ -1,0 +1,75 @@
+.cards {
+  &__container {
+    position: relative;
+  }
+  padding-bottom: 100px;
+  &__items {
+    padding-top: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-row-gap: 20px;
+    padding-bottom: 80px;
+  }
+  &__item {
+    border-radius: 5px;
+    border: 2px solid #fa6f32;
+  }
+  &__img {
+    display: flex;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px 11px 14px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+  &__country {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+  &__btn {
+    width: 298px;
+    height: 54px;
+    background: #fe9013;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-left: 4px;
+  }
+  &__arrows {
+  }
+  &__arrow {
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    &_left {
+      top: 40.7%;
+    left: -62px;
+    }
+    &_right {
+      top: 40.7%;
+      right: -60px;
+    }
+  }
+}

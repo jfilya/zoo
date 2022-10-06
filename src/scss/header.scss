@@ -36,7 +36,7 @@
     border: 1.18841px solid #ffffff;
     position: relative;
     padding: 3.55px 4.75px;
-    svg {
+    #bamboo {
       position: absolute;
       left: 8px;
       top: 22px;
@@ -115,7 +115,7 @@
     }
   }
   .active-burger {
-    svg {
+    #bamboo {
       rect {
         fill: black;
       }
@@ -133,7 +133,7 @@
         font-weight: 400;
       }
     }
-    svg {
+    #bamboo {
       path {
         fill: #fe9013;
       }
@@ -152,7 +152,7 @@
       font-size: 12.2899px;
       line-height: 15px;
       padding: 0;
-      svg {
+      #bamboo {
         left: 3px;
         top: 10px;
         width: 7.54px;

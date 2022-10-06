@@ -10,15 +10,14 @@ const sync = require("browser-sync").create();
 const ts = require('gulp-typescript');
  
 function scripts() {
-  const tsResult = src('src/**/*.ts')
+  src('src/**/*.ts')
     .pipe(ts({
         noImplicitAny: true,
-      }))
-    
-  return tsResult.js.pipe(concat("main.min.js"))
-  .pipe(uglify())
-  .pipe(dest('src/js'))
-  .pipe(sync.stream());
+      })).js
+    .pipe(concat("main.min.js"))
+    .pipe(uglify())
+    .pipe(dest('src/js'))
+    .pipe(sync.stream());
 };
 
 
