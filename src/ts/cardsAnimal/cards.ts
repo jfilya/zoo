@@ -4,6 +4,7 @@ const cards = [
         title: "giant Pandas",
         text: "Native to Southwest China",
         icon: "../svg/banana.svg",
+        category: "mammal",
 
     },
     {
@@ -11,30 +12,35 @@ const cards = [
         title: "Eagles",
         text: "Native to South America",
         icon: "../svg/fish.svg",
+        category: "predator",
     },
     {
         img: "../img/item3.jpg",
         title: "Gorillas",
         text: "Native to Congo",
         icon: "../svg/banana.svg",
+        category: "mammal",
     },
     {
         img: "../img/item4.jpg",
         title: "Two-toed Sloth",
         text: "Mesoamerica, South America",
         icon: "../svg/banana.svg",
+        category: "mammal",
     },
     {
         img: "../img/item5.jpg",
         title: "cheetahs",
         text: "Native to Africa",
         icon: "../svg/fish.svg",
+        category: "predator",
     },
     {
         img: "../img/item6.jpg",
         title: "Penguins",
         text: "Native to Antarctica",
         icon: "../svg/fish.svg",
+        category: "predator",
     },
 
 ]
