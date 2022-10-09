@@ -38,29 +38,29 @@
     color: #fe9013;
     margin-bottom: 30px;
   }
+  &__info {
+    padding-left: 99px;
+    margin-bottom: 60px;
+  }
   &__know {
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
     margin-bottom: 40px;
-    padding-left: 99px;
   }
   &__during {
     font-weight: 500;
     font-size: 16px;
     line-height: 21px;
     margin-bottom: 10px;
-    padding-left: 99px;
   }
   &__even {
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
-    margin-bottom: 60px;
-    max-width: 965px;
-    padding-left: 99px;
-    span{
-        border-bottom: 1px solid $hover-text;
+    max-width: 865px;
+    span {
+      border-bottom: 1px solid $hover-text;
     }
   }
   &__title-min {
@@ -103,5 +103,139 @@
   }
   &__btn {
     @include btn;
+  }
+}
+@media screen and (max-width: 1599px) {
+  .pick {
+    padding: 30px 0 50px 0px;
+    &__block {
+      padding: 30px 0 50px 0px;
+    }
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__info {
+      padding: 0 47px 0 49px;
+      margin-bottom: 40px;
+    }
+    &__know {
+      margin-bottom: 20px;
+    }
+    &__render {
+      margin-bottom: 72px;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .pick {
+    &__during,
+    &__even {
+      max-width: 813px;
+    }
+  }
+}
+@media screen and (max-width: 999px) {
+  .pick {
+    padding: 20px 0 20px 0px;
+    &__container {
+      padding: 0 !important;
+    }
+    &__block {
+      padding: 10px 20px 60px 20px;
+    }
+    &__title {
+      font-size: 42px;
+      line-height: 50px;
+    }
+    &__info {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+    &__know {
+      font-size: 22px;
+      line-height: 26px;
+    }
+    &__know,
+    &__during,
+    &__even {
+      max-width: 100%;
+    }
+    &__title-min {
+      margin-bottom: 20px;
+    }
+    &__vector {
+      position: relative;
+      margin: 0 42px 0 0;
+      img {
+        display: none;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(../svg/vector-green.svg);
+        width: 90px;
+        height: 30px;
+        top: -16px;
+        left: -32px;
+      }
+    }
+    &__render {
+      margin-bottom: 42px;
+      padding-right: 12px;
+    }
+  }
+}
+@media screen and (max-width: 639px) {
+  .pick {
+    &__container {
+      padding: 0 10px !important;
+    }
+    &__block {
+      padding: 20px 0 40px 0;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 10px;
+    }
+    &__info {
+      margin-bottom: 20px;
+    }
+    &__know {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      margin-left: -1px;
+    }
+    &__during,
+    &__even {
+      display: none;
+    }
+    &__title-min {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__render {
+      flex-direction: column;
+      align-items: center;
+      padding-right: 0px;
+      margin-bottom: 10px;
+    }
+    &__icon {
+      margin-bottom: 10px;
+    }
+    &__pay {
+      &:first-child{
+        margin-bottom: 42px;
+      }
+      margin-bottom: 29px;
+    }
+    &__vector {
+      transform: rotate(90deg);
+      &::before {
+        top: -136px;
+        left: -78px;
+      }
+    }
   }
 }
