@@ -3,5 +3,13 @@ interface Animal {
     title: string;
     text: string;
     icon: string;
+    category: string;
 }
 
+interface Testimonials {
+    img: string;
+    name: string;
+    local: string;
+    day: string;
+    info: string;
+}
