@@ -1,3 +1,4 @@
+@import './colors.scss';
 .backstage {
   padding: 140px 0 165px 0;
   background: url(../img/flower_foto.png);
@@ -24,20 +25,17 @@
       font-weight: 400;
       font-size: 48px;
       line-height: 58px;
-      color: #333b41;
       margin-bottom: 20px;
     }
     p {
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
-      color: #333b41;
     }
     h3 {
       font-weight: 400;
       font-size: 24px;
       line-height: 29px;
-      color: #333b41;
       margin: 53px 0 34px 0;
     }
   }
@@ -108,7 +106,4 @@
       line-height: 22px;
     }
   }
-}
-@media screen and (max-width: 375px) {
-
 }

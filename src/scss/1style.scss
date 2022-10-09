@@ -1,3 +1,4 @@
+@import './colors.scss';
 * {
     box-sizing: border-box;
     text-size-adjust: none;
@@ -40,6 +41,7 @@
     position: relative;
     overflow-x: hidden;
     background-color: #fff;
+    color: $text;
   }
   input {
     outline: none;

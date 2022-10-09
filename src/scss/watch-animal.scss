@@ -1,3 +1,5 @@
+@import './mixin.scss';
+@import './colors.scss';
 .watch-animal {
   padding: 12px 0 100px 0;
   &__container {
@@ -7,26 +9,15 @@
     position: relative;
   }
   &__btn {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ffffff;
-    width: 298px;
-    height: 54px;
-    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-    border-radius: 25px;
-    cursor: pointer;
+    @include btn;
     margin-right: 99px;
-    padding-left: 5px;
   }
 }
 .favorite-block {
   max-width: 573px;
   position: relative;
   &__circle {
-    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    background: $btn;
     width: 465px;
     height: 465px;
     border-radius: 100%;

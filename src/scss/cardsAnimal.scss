@@ -1,7 +1,9 @@
+@import './mixin.scss';
+@import './colors.scss';
 .cards {
   background: url(../img/palm_foto.png) left -589px bottom -207px no-repeat,
     url(../img/strelitzia.png) right bottom no-repeat;
-  background-size: auto, auto, cover; /* Меняем масштаб */
+  background-size: auto, auto, cover;
 
   &__container {
     position: relative;
@@ -21,7 +23,7 @@
   }
   &__item {
     border-radius: 5px;
-    border: 1px solid #fa6f32;
+    border: 1px solid $border;
     overflow: hidden;
     transition: 0.5s;
     &:hover {
@@ -47,33 +49,25 @@
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    color:#000000;
   }
   &__country {
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
+    color:#000000;
   }
   &__button {
     display: flex;
     justify-content: center;
   }
   &__btn {
-    width: 298px;
-    height: 54px;
-    background: #fe9013;
-    border-radius: 25px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ffffff;
-    padding-left: 4px;
+    @include btn;
   }
   &__arrow {
     width: 62px;
     height: 62px;
-    background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+    background: $btn;
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -83,7 +77,10 @@
     cursor: pointer;
     transition: 0.5s;
     &:hover {
-      background: #4b9200;
+      background: $hover;
+    }
+    &:active{
+      background: $active;
     }
     &_left {
       left: -62px;

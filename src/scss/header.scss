@@ -1,3 +1,4 @@
+@import './colors.scss';
 .head-background {
   background: url(../img/GiantPanda.jpg);
   background-position: center center;
@@ -99,8 +100,8 @@
   .active-menu {
     display: block;
     position: fixed;
-    color: black;
-    background: white;
+    color: #000000;
+    background: #ffffff;
     z-index: 4;
     width: 100vw;
     left: 0;
@@ -110,7 +111,7 @@
     width: 100%;
     padding-bottom: 40px;
     a {
-      color: #333b41;
+      color: $text;
       font-weight: 400;
     }
   }
@@ -127,15 +128,15 @@
       &__logo {
         z-index: 6;
         position: relative;
-        color: #fe9013;
-        border: 0.8px solid #fe9013;
+        color: $hover-text;
+        border: 0.8px solid $border;
         border-radius: 2px;
         font-weight: 400;
       }
     }
     #bamboo {
       path {
-        fill: #fe9013;
+        fill: $hover-text;
       }
     }
   }
