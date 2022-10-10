@@ -138,9 +138,9 @@
 }
 @media screen and (max-width: 999px) {
   .testimonials {
-    padding: 60px 0 74px 0;
+    padding: 60px 0 80px 0;
     background-size: 120px;
-    background-position: right -5px bottom -7px;
+    background-position: right -5px bottom;
     &__slider {
       flex-direction: column;
       height: 357px;

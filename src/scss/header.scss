@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import "./colors.scss";
 .head-background {
   background: url(../img/GiantPanda.jpg);
   background-position: center center;
@@ -29,7 +29,7 @@
     width: 82px;
     height: 52px;
     border-radius: 2px;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 19.0145px;
     line-height: 22px;
     text-align: center;
@@ -48,6 +48,12 @@
   }
   &__element {
     margin-right: 58px;
+    a {
+      transition: 0.2s;
+      &:hover {
+        color: #4b9200;
+      }
+    }
     &_active {
       background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
       background-clip: text;
@@ -58,6 +64,10 @@
   }
   &__copyright {
     color: #ffffff;
+    transition: 0.2s;
+    &:hover {
+      color: #4b9200;
+    }
   }
 }
 @media screen and (max-width: 1599px) {
@@ -187,7 +197,6 @@
     right: 10px;
   }
 }
-
 
 @media screen and (max-width: 375px) {
   .head-background {
