@@ -1,10 +1,10 @@
 @import "./mixin.scss";
+@import './colors.scss';
 .footer {
   padding: 40px 0 50px 0;
   background: #111115;
   &__top {
-    display: flex;
-    justify-content: space-between;
+    @include stretch(space-between, auto);
     margin-bottom: 45px;
   }
   &__top-right {
@@ -37,8 +37,7 @@
     }
   }
   &__entry {
-    display: flex;
-    align-items: center;
+    @include stretch(auto, center);
     input {
       padding-left: 10px;
       width: 228px;
@@ -68,8 +67,8 @@
       color: #000000;
       transition: 0.2s;
       &:hover {
-        border: 1px solid #4b9200;
-        color: #4b9200;
+        border: 1px solid $hover-link;
+        color: $hover-link;
       }
     }
   }
@@ -80,9 +79,7 @@
     padding-left: 2px;
   }
   &__bottom {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    @include stretch(space-between, flex-end);
   }
   &__bottom-left {
     li {
@@ -94,9 +91,9 @@
         display: flex;
         transition: 0.2s;
         &:hover {
-          color: #4b9200;
+          color: $hover-link;
           .footer__social {
-            background: #4b9200;
+            background: $hover-link;
           }
         }
       }
@@ -106,9 +103,7 @@
     width: 26px;
     height: 26px;
     border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include stretch(center, center);
     background: rgba(196, 196, 196, 0.5);
     margin-right: 12px;
   }
@@ -128,7 +123,7 @@
         margin-bottom: 10px;
       }
       &:hover {
-        color: #4b9200;
+        color: $hover-link;
       }
     }
   }
@@ -206,8 +201,7 @@
       width: 100%;
     }
     &__button{
-        display: flex;
-        justify-content: center;
+      @include stretch(center, center);
     }
     &__bottom-left {
       display: flex;

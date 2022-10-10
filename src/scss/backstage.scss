@@ -1,4 +1,5 @@
 @import './colors.scss';
+@import './mixin.scss';
 .backstage {
   padding: 140px 0 165px 0;
   background: url(../img/flower_foto.png);
@@ -6,8 +7,7 @@
   background-repeat: no-repeat;
   background-position-y: 12px;
   &__container {
-    display: flex;
-    justify-content: space-between;
+    @include stretch(space-between,center);
   }
   &__image {
     max-width: 609px;

@@ -47,8 +47,7 @@
     padding: 12px 12px 19px 15px;
   }
   &__head {
-    display: flex;
-    align-items: center;
+    @include stretch(auto, center);
     margin-bottom: 10px;
   }
   &__img {
@@ -72,8 +71,7 @@
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
-    display: flex;
-    align-items: center;
+    @include stretch(auto, center);
   }
   &__text {
     font-weight: 300;
@@ -87,8 +85,7 @@
     width: 0px;
   }
   &__scroll {
-    display: flex;
-    justify-content: center;
+    @include stretch(center, auto);
     margin-bottom: 31px;
   }
   &__scrollbar {
@@ -167,8 +164,7 @@
       display: none;
     }
     &__button {
-      display: flex;
-      justify-content: center;
+      @include stretch(center, auto);
     }
     &__btn {
       width: 240px;

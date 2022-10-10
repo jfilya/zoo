@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./mixin.scss";
 .header {
   background: #000000;
   padding: 14px 0;
@@ -7,17 +8,14 @@
   position: sticky;
   top:0;
   &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include stretch(space-between, center);
   }
 
   &__burger {
     display: none;
   }
   &__navigation {
-    display: flex;
-    align-items: center;
+    @include stretch(auto, center);
     font-weight: 500;
   }
   &__logo {
@@ -37,10 +35,6 @@
       position: absolute;
       left: 8px;
       top: 22px;
-    }
-    &_about {
-      cursor: default;
-      pointer-events: none;
     }
   }
   &__list {

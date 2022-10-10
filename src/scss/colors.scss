@@ -1,7 +1,8 @@
 $btn:linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-$hover: #E47209;
-$active: #4B9200;
+$hover:linear-gradient(113.96deg, #E47209, #E47209);
+$active:linear-gradient(#4B9200, #4B9200) ;
 $disable: #767474;
 $text:#333B41;
 $border:#fa6f32;
 $hover-text:#fe9013;
+$hover-link:#4B9200;

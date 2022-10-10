@@ -71,10 +71,8 @@
     margin-bottom: 40px;
   }
   &__render {
-    display: flex;
-    justify-content: center;
+    @include stretch(center, start);
     margin-bottom: 62px;
-    align-items: start;
   }
   &__icon {
     width: 168px;
@@ -82,9 +80,7 @@
     border: 1px solid $hover-text;
     background: #ffffff;
     border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include stretch(center, center);
     margin-bottom: 30px;
   }
   &__vector {
@@ -98,8 +94,7 @@
     color: #333b41;
   }
   &__button {
-    display: flex;
-    justify-content: center;
+    @include stretch(center, auto);
   }
   &__btn {
     @include btn;
