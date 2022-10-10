@@ -1,15 +1,11 @@
 @import "./colors.scss";
-.head-background {
-  background: url(../img/GiantPanda.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .header {
   background: #000000;
   padding: 14px 0;
   z-index: 1;
   position: relative;
+  position: sticky;
+  top:0;
   &__container {
     display: flex;
     align-items: center;
@@ -41,6 +37,10 @@
       position: absolute;
       left: 8px;
       top: 22px;
+    }
+    &_about {
+      cursor: default;
+      pointer-events: none;
     }
   }
   &__list {
@@ -86,13 +86,12 @@
     &__element {
       margin-right: 48px;
     }
-  }
-  .header {
     &__burger {
       display: block;
-      position: fixed;
+      position: absolute;
       z-index: 5;
       right: 20px;
+      cursor: pointer;
     }
     &__list {
       top: 82px;
@@ -126,7 +125,7 @@
     }
   }
   .active-burger {
-    #bamboo {
+    svg {
       rect {
         fill: black;
       }
@@ -198,9 +197,3 @@
   }
 }
 
-@media screen and (max-width: 375px) {
-  .head-background {
-    background-position: center 33px;
-    background-size: 120%;
-  }
-}

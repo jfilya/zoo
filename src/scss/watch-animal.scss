@@ -1,6 +1,10 @@
-@import './mixin.scss';
-@import './colors.scss';
+@import "./mixin.scss";
+@import "./colors.scss";
 .watch-animal {
+  background: url(../img/GiantPanda.jpg);
+  background-position: center -80px;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 12px 0 100px 0;
   &__container {
     display: flex;
@@ -67,7 +71,12 @@
     }
   }
 }
-
+@media screen and (max-width: 1200px) {
+  .watch-animal {
+    background-position: center -80px;
+    background-size: 120%;
+  }
+}
 @media screen and (max-width: 999px) {
   .favorite-block {
     max-width: 292px;
@@ -94,6 +103,11 @@
     }
   }
 }
+@media screen and (max-width: 700px){
+  .watch-animal {
+    background-position: center -33px;
+  }
+}
 @media screen and (max-width: 639px) {
   .favorite-block {
     padding-top: 12px;
@@ -113,6 +127,8 @@
   }
   .watch-animal {
     padding: 12px 0 0 0;
+    background-position: center -60px;
+    background-size: 100%;
     &__btn {
       left: 50%;
       transform: translate(-50%, 0%);
@@ -120,5 +136,17 @@
       bottom: -73px;
       padding-left: 3px;
     }
+  }
+}
+@media screen and (max-width: 450px) {
+  .watch-animal {
+    background-position: center -24px;
+    background-size: 120%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .watch-animal {
+    background-position: center 0px;
+    background-size: 120%;
   }
 }
