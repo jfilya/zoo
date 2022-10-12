@@ -59,7 +59,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src("src/img/**/*")
+  return src("src/images/img/**/*")
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),

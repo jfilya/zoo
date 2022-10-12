@@ -2,7 +2,7 @@
 @import './mixin.scss';
 .backstage {
   padding: 140px 0 165px 0;
-  background: url(../img/flower_foto.png);
+  background: url(../images/img/flower_foto.png);
   background-position: center right;
   background-repeat: no-repeat;
   background-position-y: 12px;
@@ -56,7 +56,7 @@
 }
 @media screen and (max-width: 999px) {
   .backstage {
-    background: url(../img/flower_foto.png);
+    background: url(../images/img/flower_foto.png);
     background-position: center right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -80,7 +80,7 @@
 }
 @media screen and (max-width: 639px) {
   .backstage {
-    background: url(../img/flower_foto1.png);
+    background: url(../images/img/flower_foto1.png);
     background-position: top right;
     background-repeat: no-repeat;
     padding: 103px 0 40px 0;
