@@ -1,8 +1,31 @@
-$btn:linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-$hover:linear-gradient(113.96deg, #E47209, #E47209);
-$active:linear-gradient(#4B9200, #4B9200) ;
+$btn: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+$hover: linear-gradient(113.96deg, #e47209, #e47209);
+$active: linear-gradient(#4b9200, #4b9200);
 $disable: #767474;
-$text:#333B41;
-$border:#fa6f32;
-$hover-text:#fe9013;
-$hover-link:#4B9200;
+$text: #333b41;
+$border: #fa6f32;
+$hover-text: #fe9013;
+$hover-link: #4b9200;
+$pick-background: #fdfdff85;
+$donate-background: linear-gradient(
+    315.75deg,
+    rgba(254, 210, 144, 0.7) 30.06%,
+    #febdab 100.95%,
+    rgba(254, 210, 144, 0.7) 106.36%
+  ),
+  linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  ),
+  linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  );

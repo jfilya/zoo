@@ -7,19 +7,20 @@ const imagemin = require("gulp-imagemin");
 const del = require("del");
 const sync = require("browser-sync").create();
 
-const ts = require('gulp-typescript');
- 
-function scripts() {
-  src('src/**/*.ts')
-    .pipe(ts({
-        noImplicitAny: true,
-      })).js
-    .pipe(concat("main.min.js"))
-    .pipe(uglify())
-    .pipe(dest('src/js'))
-    .pipe(sync.stream());
-};
+const ts = require("gulp-typescript");
 
+function scripts() {
+  src("src/**/*.ts")
+    .pipe(
+      ts({
+        noImplicitAny: true,
+      })
+    )
+    .js.pipe(concat("main.min.js"))
+    .pipe(uglify())
+    .pipe(dest("src/js"))
+    .pipe(sync.stream());
+}
 
 function browserSync() {
   sync.init({
@@ -30,7 +31,17 @@ function browserSync() {
 }
 
 function styles() {
-  return src("src/scss/**/*.scss")
+  return src([
+    "src/scss/style.scss",
+    "src/scss/header.scss",
+    "src/scss/watch-animal.scss",
+    "src/scss/backstage.scss",
+    "src/scss/cards-animal.scss",
+    "src/scss/pick.scss",
+    "src/scss/testimonials.scss",
+    "src/scss/footer.scss",
+    "src/scss/donate-info.scss",
+  ])
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(concat("style.min.css"))
     .pipe(
@@ -62,17 +73,10 @@ function images() {
     .pipe(dest("dist/img"));
 }
 
-
-
 function build() {
-  return src(
-    [
-      "src/css/style.min.css",
-      "src/js/main.min.js",
-      "src/*.html",
-    ],
-    { base: "app" }
-  ).pipe(dest("dist"));
+  return src(["src/css/style.min.css", "src/js/main.min.js", "src/*.html"], {
+    base: "app",
+  }).pipe(dest("dist"));
 }
 
 function watching() {

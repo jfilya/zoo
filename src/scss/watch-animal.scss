@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
   background-size: 1920px;
   padding: 12px 0 100px 0;
-  background-color: #000000;
   &__container {
     @include stretch(auto, flex-end);
     flex-direction: column;
@@ -21,7 +20,7 @@
 .watch-animal-donate {
   padding: 0;
   height: 390px;
-  background-position: center -305px;
+  background-position: center -405px;
 }
 .favorite-block {
   max-width: 573px;
@@ -52,6 +51,7 @@
 }
 @media screen and (max-width: 1600px) {
   .watch-animal {
+    background-position: center -186px;
     background-size: cover;
   }
 }
@@ -76,26 +76,15 @@
   }
   .watch-animal {
     padding: 12px 0 49px 0;
+    background-position: center center;
+    background-size: cover;
     &__btn {
       margin-right: 105px;
       padding-left: 0px;
     }
   }
 }
-@media screen and (max-width: 1400px) {
-  .watch-animal-donate {
-    height: 448px;
-    padding: 0;
-    background-position: 0px -223px;
-    background-size: 100%;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .watch-animal {
-    background-position: center -161px;
-    background-size: 120%;
-  }
-}
+
 @media screen and (max-width: 1000px) {
   .watch-animal-donate {
     height: 448px;
@@ -123,6 +112,8 @@
   }
   .watch-animal {
     padding: 12px 0 45px 0;
+    background-position: center center;
+    background-size: cover;
     &__btn {
       position: absolute;
       left: 21px;
@@ -130,9 +121,10 @@
     }
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 640px) {
   .watch-animal {
     background-position: center -85px;
+    background-size: 120%;
   }
   .watch-animal-donate {
     height: 335px;
@@ -160,8 +152,8 @@
   }
   .watch-animal {
     padding: 12px 0 0 0;
-    background-position: center -60px;
-    background-size: 100%;
+    background-position: center center;
+    background-size: cover;
     &__btn {
       left: 50%;
       transform: translate(-50%, 0%);
@@ -171,19 +163,12 @@
     }
   }
 }
-@media screen and (max-width: 450px) {
-  .watch-animal {
-    background-position: center -24px;
-    background-size: 120%;
-  }
-}
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 320px) {
   .watch-animal {
     background-position: center -25px;
     background-size: 120%;
   }
-}
-@media screen and (max-width: 320px) {
   .watch-animal-donate {
     height: 187px;
     padding: 0;

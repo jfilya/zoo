@@ -5,9 +5,10 @@ class SliderTestimonials {
   }
   buildTestimonial(): void {
     const testimonialsSlider = document.querySelector('.testimonials__slider') as HTMLDivElement;
-    testimonialsSlider.innerHTML = ``;
-    for (const test of this.testimonials) {
-      testimonialsSlider.innerHTML += `<div class="testimonials__border">
+    if (testimonialsSlider) {
+      testimonialsSlider.innerHTML = ``;
+      for (const test of this.testimonials) {
+        testimonialsSlider.innerHTML += `<div class="testimonials__border">
             <div class="testimonials__item">
             <div class="testimonials__head">
               <img class="testimonials__img" src="${test.img}" alt="icon">
@@ -23,7 +24,9 @@ class SliderTestimonials {
             <p class="testimonials__text">${test.info}</p>
           </div>
           </div>`;
+      }
     }
+
   }
 }
 const t = new SliderTestimonials();

@@ -1,14 +1,15 @@
 
 class ChooseAnimal {
-    animal: Animal[];
-    constructor() {
-        this.animal = cards;
-    }
-    buildCards(): void {
-        const items = document.querySelector('.cards__items') as HTMLDivElement;
-        items.innerHTML = ``;
-        for (const a of this.animal) {
-            items.innerHTML += `<div class="cards__item">
+  animal: Animal[];
+  constructor() {
+    this.animal = cards;
+  }
+  buildCards(): void {
+    const items = document.querySelector('.cards__items') as HTMLDivElement;
+    if (items) {
+      items.innerHTML = ``;
+      for (const a of this.animal) {
+        items.innerHTML += `<div class="cards__item">
             <img class="cards__img" src="${a.img}" alt="${a.title}">
             <div class="cards__bottom">
               <div class="cards__text">
@@ -18,8 +19,9 @@ class ChooseAnimal {
               <img class="cards__icon cards__icon_${a.category}" src="${a.icon}" alt="icon">
             </div>
           </div>`;
-        }
+      }
     }
+  }
 
 }
 const animal = new ChooseAnimal();

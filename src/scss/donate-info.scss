@@ -1,0 +1,34 @@
+@import "./mixin.scss";
+@import "./colors.scss";
+.donate-info {
+  background: $donate-background;
+  padding: 40px 0 180px 0;
+  &__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-weight: 500;
+    line-height: 22px;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  &__title-donate {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    color: $hover-text;
+    margin-bottom: 60px;
+  }
+  &__block {
+    padding: 40px 92px 62px 92px;
+  }
+  &__share {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
