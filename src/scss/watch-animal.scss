@@ -1,11 +1,13 @@
 @import "./mixin.scss";
 @import "./colors.scss";
 .watch-animal {
+  background: black;
   background: url(../img/GiantPanda.jpg);
-  background-position: center -80px;
+  background-position: center -188px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1920px;
   padding: 12px 0 100px 0;
+  background-color: #000000;
   &__container {
     @include stretch(auto, flex-end);
     flex-direction: column;
@@ -15,6 +17,11 @@
     @include btn;
     margin-right: 99px;
   }
+}
+.watch-animal-donate {
+  padding: 0;
+  height: 390px;
+  background-position: center -305px;
 }
 .favorite-block {
   max-width: 573px;
@@ -41,6 +48,11 @@
     span {
       color: #ffee2e;
     }
+  }
+}
+@media screen and (max-width: 1600px) {
+  .watch-animal {
+    background-size: cover;
   }
 }
 @media screen and (max-width: 1599px) {
@@ -70,10 +82,26 @@
     }
   }
 }
+@media screen and (max-width: 1400px) {
+  .watch-animal-donate {
+    height: 448px;
+    padding: 0;
+    background-position: 0px -223px;
+    background-size: 100%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .watch-animal {
-    background-position: center -80px;
+    background-position: center -161px;
     background-size: 120%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .watch-animal-donate {
+    height: 448px;
+    padding: 0;
+    background-position: -171px -243px;
+    background-size: 160%;
   }
 }
 @media screen and (max-width: 999px) {
@@ -102,9 +130,15 @@
     }
   }
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .watch-animal {
-    background-position: center -33px;
+    background-position: center -85px;
+  }
+  .watch-animal-donate {
+    height: 335px;
+    padding: 0;
+    background-position: -278px -261px;
+    background-size: 217%;
   }
 }
 @media screen and (max-width: 639px) {
@@ -145,7 +179,15 @@
 }
 @media screen and (max-width: 400px) {
   .watch-animal {
-    background-position: center 0px;
+    background-position: center -25px;
     background-size: 120%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .watch-animal-donate {
+    height: 187px;
+    padding: 0;
+    background-position: -149px -143px;
+    background-size: 240%;
   }
 }
