@@ -11,24 +11,188 @@
     text-transform: uppercase;
     margin-bottom: 10px;
   }
+  &__pick-title {
+    margin-left: -14px;
+    margin-bottom: 22px;
+  }
   &__text {
     font-weight: 500;
     line-height: 22px;
     color: #ffffff;
-    margin-bottom: 40px;
+    margin-bottom: 46px;
   }
   &__title-donate {
     font-weight: 400;
     font-size: 36px;
     line-height: 47px;
     color: $hover-text;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
   &__block {
     padding: 40px 92px 62px 92px;
   }
   &__share {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 27px;
+    margin-left: 5px;
+  }
+  &__panda {
+    margin: 107px 30px 48px 0px;
+    @include stretch(center, center);
+  }
+  &__amount {
+    margin-top: 11px;
+    p {
+      font-weight: 500;
+      font-size: 72px;
+      line-height: 58px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+  }
+  &__cross {
+    margin: 0 64px 21px 11px;
+  }
+  &__title-amount {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 15px;
+    margin-left: 4px;
+  }
+  &__range {
+    margin-bottom: 12px;
+    padding: 13px 26px;
+    width: 100%;
+    background: #404950;
+    border-radius: 2px;
+  }
+  &__range-line {
+    width: 100%;
+    height: 2px;
+    background: #72828e;
+    @include stretch(space-between, center);
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: #ffee2e;
+      position: relative;
+      &::before {
+        content: "";
+        background: url(../images/svg/roller_icon.svg);
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        opacity: 0;
+      }
+    }
+    .active-range-line {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  &__range-sum {
+    width: 100%;
+    @include stretch(space-between, center);
+    margin-bottom: 50px;
+    li {
+      position: relative;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 36px;
+      color: #333b41;
+      padding-left: 12px;
+      width: 66px;
+      &:before {
+        content: "";
+        background: url(../images/svg/dollar-sum.svg);
+        width: 10px;
+        height: 20px;
+        position: absolute;
+        top: 9px;
+        left: 1px;
+      }
+    }
+    .active-range-text{
+      color: #FE9013;
+    }
+  }
+  &__inputs {
+    @include stretch(auto, center);
+    flex-direction: column;
+    margin-bottom: 29px;
+  }
+  &__cur {
+    position: relative;
+    margin-bottom: 22px;
+    &::after {
+      content: "";
+      background: url(../images/svg/dollar.svg);
+      position: absolute;
+      width: 10px;
+      height: 20px;
+      top: 17px;
+      right: 10px;
+    }
+  }
+  &__currency {
+    width: 268px;
+    height: 54px;
+    background: transparent;
+    padding-left: 9px;
+    border: 1px solid #929699;
+    border-radius: 2px;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 22px;
+      color: #929699;
+    }
+  }
+  &__radio {
+    display: flex;
+    margin-right: 16px;
+    label {
+      @include stretch(center, center);
+      :checked + .fake::before {
+        opacity: 1;
+      }
+    }
+  }
+  &__input {
+    display: none;
+  }
+  &__monthly {
+    margin-right: 50px;
+  }
+  &__button {
+    margin-left: 6px;
+  }
+}
+.fake {
+  width: 16px;
+  height: 16px;
+  border: 1px solid $hover-text;
+  border-radius: 100%;
+  margin-right: 10px;
+  position: relative;
+  &::before {
+    content: "";
+    transition: 0.5s;
+    background: $btn;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
   }
 }

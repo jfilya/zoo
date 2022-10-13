@@ -11,3 +11,13 @@ const menuBurger = () => {
     })
 }
 menuBurger();
+const validation = () => {
+    const v = document.querySelector(".donate-info__currency") as HTMLInputElement;
+    if (v) {
+        v.oninput = () => {
+            v.value = v.value.replace(/[^0-9\.]/g, "");
+        };
+    }
+
+}
+validation();

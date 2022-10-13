@@ -6,11 +6,10 @@
   z-index: 1;
   position: relative;
   position: sticky;
-  top:0;
+  top: 0;
   &__container {
     @include stretch(space-between, center);
   }
-
   &__burger {
     display: none;
   }
@@ -63,6 +62,9 @@
       color: #4b9200;
     }
   }
+}
+.header-donate{
+  padding: 13px 0;
 }
 @media screen and (max-width: 1599px) {
   .container {
@@ -190,4 +192,3 @@
     right: 10px;
   }
 }
-

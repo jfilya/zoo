@@ -15,7 +15,7 @@
     <title>PetStory online</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header header-donate">
       <div class="header__container container">
         <nav class="header__navigation">
           <a href="index.html" class="header__logo"
@@ -75,17 +75,85 @@
         </p>
         <h3 class="donate-info__title-donate">Donation Information</h3>
         <div class="pick__block donate-info__block">
-          <h3 class="pick__title">Pick and feed a friend</h3>
+          <h3 class="pick__title donate-info__pick-title">
+            Pick and feed a friend
+          </h3>
           <p class="pick__know">
             We know the animals bring you joy, and in these extraordinary times,
             we’re glad.
           </p>
+          <span id="pay"></span>
           <div class="donate-info__panda">
-
+            <div class="donate-info__amount">
+              <p>4</p>
+              <span>Panda diet for the day.</span>
+            </div>
+            <img
+              class="donate-info__cross"
+              src="images/svg/cross.svg"
+              alt="cross"
+            />
+            <img src="images/svg/panda.svg" alt="panda" />
           </div>
-          <div class="pick__button">
-            <a href="donate.html" class="pick__btn">Feed a friend now</a>
-          </div>
+          <h5 class="donate-info__title-amount">Amount</h5>
+          <form action="send.php" method="post">
+            <div class="donate-info__range-block">
+              <div class="donate-info__range">
+                <ul class="donate-info__range-line">
+                  <li></li>
+                  <li></li>
+                  <li class="active-range-line"></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <ul class="donate-info__range-sum">
+                <li>5000</li>
+                <li>2000</li>
+                <li class="active-range-text">1000</li>
+                <li>500</li>
+                <li>250</li>
+                <li>100</li>
+                <li>50</li>
+                <li>25</li>
+              </ul>
+              <div class="donate-info__inputs">
+                <div class="donate-info__cur">
+                  <input
+                    class="donate-info__currency"
+                    type="text"
+                    placeholder="Another amount"
+                  />
+                </div>
+                <div class="donate-info__radio">
+                  <label class="donate-info__monthly">
+                    <input
+                      class="donate-info__input"
+                      type="radio"
+                      name="payment"
+                    />
+                    <div class="donate-info__monthly_fake fake"></div>
+                    <span>Monthly</span>
+                  </label>
+                  <label class="donate-info__once">
+                    <input
+                      class="donate-info__input"
+                      type="radio"
+                      name="payment"
+                    />
+                    <div class="donate-info__once_fake fake"></div>
+                    <span>Once</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="pick__button donate-info__button">
+              <button type="submit" class="pick__btn">Feed a friend now</button>
+            </div>
+          </form>
           <p class="donate-info__share">
             Share with your friends on social networks
           </p>
@@ -102,7 +170,7 @@
                 <img src="images/svg/bamboo.svg" alt="bamboo" id="bamboo" />
               </a>
               <div class="footer__button">
-                <a class="footer__btn disabled">donate for volunteers</a>
+                <a href="#pay" class="footer__btn">donate for volunteers</a>
               </div>
             </div>
             <form class="footer__top-right" action="order.php" method="POST">
