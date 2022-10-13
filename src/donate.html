@@ -99,7 +99,7 @@
           <form action="send.php" method="post">
             <div class="donate-info__range-block">
               <div class="donate-info__range">
-                <div class="active-range-line">
+                <div id="active-range-line" class="transforms-5">
                 </div>
                 <ul class="donate-info__range-line">
                   <li></li>
@@ -128,6 +128,7 @@
                     class="donate-info__currency"
                     type="text"
                     placeholder="Another amount"
+                    required
                   />
                 </div>
                 <div class="donate-info__radio">
@@ -136,6 +137,7 @@
                       class="donate-info__input"
                       type="radio"
                       name="payment"
+                      required
                     />
                     <div class="donate-info__monthly_fake fake"></div>
                     <span>Monthly</span>
@@ -145,6 +147,7 @@
                       class="donate-info__input"
                       type="radio"
                       name="payment"
+                      required
                     />
                     <div class="donate-info__once_fake fake"></div>
                     <span>Once</span>

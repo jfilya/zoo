@@ -96,6 +96,7 @@
       color: #333b41;
       padding-left: 12px;
       width: 66px;
+      transition: 0.5s;
       cursor: pointer;
       &:before {
         content: "";
@@ -187,16 +188,41 @@
     opacity: 0;
   }
 }
-.active-range-line {
+#active-range-line {
   background: url(../images/svg/roller_icon.svg);
   width: 40px;
   height: 40px;
   position: absolute;
   top: -6px;
   left: 11px;
-  transform: translate(653px);
-  visibility: visible;
+  transition: 0.5s;
 }
+
+#active-range-line.transforms-0 {
+  transform: translate(0px);
+}
+#active-range-line.transforms-1 {
+  transform: translate(130px);
+}
+#active-range-line.transforms-2 {
+  transform: translate(261px);
+}
+#active-range-line.transforms-3 {
+  transform: translate(391px);
+}
+#active-range-line.transforms-4 {
+  transform: translate(522px);
+}
+#active-range-line.transforms-5 {
+  transform: translate(653px);
+}
+#active-range-line.transforms-6 {
+  transform: translate(783px);
+}
+#active-range-line.transforms-7 {
+  transform: translate(913px);
+}
+
 @media screen and (max-width: 1599px) {
   .donate-info {
     padding-bottom: 30px;
@@ -246,8 +272,27 @@
       margin-bottom: 51px;
     }
   }
-  .active-range-line {
+
+  #active-range-line.transforms-1 {
+    transform: translate(-16px);
+  }
+  #active-range-line.transforms-2 {
+    transform: translate(114px);
+  }
+  #active-range-line.transforms-3 {
+    transform: translate(244px);
+  }
+  #active-range-line.transforms-4 {
+    transform: translate(374px);
+  }
+  #active-range-line.transforms-5 {
     transform: translate(504px);
+  }
+  #active-range-line.transforms-6 {
+    transform: translate(634px);
+  }
+  #active-range-line.transforms-7 {
+    transform: translate(764px);
   }
 }
 
@@ -328,8 +373,21 @@
       margin-left: 0px;
     }
   }
-  .active-range-line {
+
+  #active-range-line.transforms-3 {
+    transform: translate(9px);
+  }
+  #active-range-line.transforms-4 {
+    transform: translate(139px);
+  }
+  #active-range-line.transforms-5 {
     transform: translate(269px);
+  }
+  #active-range-line.transforms-6 {
+    transform: translate(399px);
+  }
+  #active-range-line.transforms-7 {
+    transform: translate(529px);
   }
 }
 @media screen and (max-width: 639px) {
@@ -433,11 +491,26 @@
     }
   }
 
-  .active-range-line {
+  #active-range-line {
     width: 20px;
     height: 20px;
     background-size: cover;
     top: -3px;
-    transform: translate(129px);
+  }
+
+  #active-range-line.transforms-3 {
+    transform: translate(-2px);
+  }
+  #active-range-line.transforms-4 {
+    transform: translate(64px);
+  }
+  #active-range-line.transforms-5 {
+    transform: translate(130px);
+  }
+  #active-range-line.transforms-6 {
+    transform: translate(195px);
+  }
+  #active-range-line.transforms-7 {
+    transform: translate(261px);
   }
 }
