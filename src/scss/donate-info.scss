@@ -69,6 +69,7 @@
     width: 100%;
     background: #404950;
     border-radius: 2px;
+    position: relative;
   }
   &__range-line {
     width: 100%;
@@ -80,22 +81,7 @@
       height: 10px;
       border-radius: 100%;
       background: #ffee2e;
-      position: relative;
-      &::before {
-        content: "";
-        background: url(../images/svg/roller_icon.svg);
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: -15px;
-        left: -15px;
-        opacity: 0;
-      }
-    }
-    .active-range-line {
-      &::before {
-        opacity: 1;
-      }
+      cursor: pointer;
     }
   }
   &__range-sum {
@@ -110,6 +96,7 @@
       color: #333b41;
       padding-left: 12px;
       width: 66px;
+      cursor: pointer;
       &:before {
         content: "";
         background: url(../images/svg/dollar-sum.svg);
@@ -120,8 +107,11 @@
         left: 1px;
       }
     }
-    .active-range-text{
-      color: #FE9013;
+    .active-range-text {
+      color: #fe9013;
+      &:before {
+        background: url(../images/svg/dollar-active.svg);
+      }
     }
   }
   &__inputs {
@@ -159,6 +149,7 @@
     display: flex;
     margin-right: 16px;
     label {
+      cursor: pointer;
       @include stretch(center, center);
       :checked + .fake::before {
         opacity: 1;
@@ -194,5 +185,259 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+  }
+}
+.active-range-line {
+  background: url(../images/svg/roller_icon.svg);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -6px;
+  left: 11px;
+  transform: translate(653px);
+  visibility: visible;
+}
+@media screen and (max-width: 1599px) {
+  .donate-info {
+    padding-bottom: 30px;
+    &__title {
+      margin-bottom: 30px;
+      max-width: 778px;
+    }
+    &__title-donate {
+      margin-bottom: 40px;
+    }
+    &__know {
+      margin: 0 auto;
+      max-width: fit-content;
+    }
+    &__block {
+      padding: 19px 47px 45px 47px;
+    }
+    &__pick-title {
+      margin-bottom: 11px;
+    }
+    &__title-amount {
+      width: 810px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 17px;
+    }
+    &__range {
+      width: 810px;
+      margin: 0 auto;
+    }
+    &__range {
+      padding: 13px 10px;
+      margin-bottom: 11px;
+    }
+    &__range-sum,
+    &__range-line {
+      li {
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+    &__range-sum {
+      width: 863px;
+      margin: 0 auto;
+      padding-left: 19px;
+      margin-bottom: 51px;
+    }
+  }
+  .active-range-line {
+    transform: translate(504px);
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .donate-info {
+    padding-top: 31px;
+    padding-bottom: 46px;
+    &__title {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 20px;
+    }
+    &__text {
+      margin-bottom: 30px;
+    }
+    &__title-donate {
+      margin-bottom: 30px;
+    }
+    &__pick-title {
+      font-size: 48px;
+      line-height: 58px;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+    &__know {
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+    }
+    &__panda {
+      margin: 97px 30px 41px 0px;
+    }
+    &__block {
+      padding: 30px 0px 30px 0px;
+    }
+    &__title-amount {
+      padding-left: 10px;
+      margin-bottom: 6px;
+    }
+    &__title-amount,
+    &__range,
+    &__range-sum {
+      width: 600px;
+    }
+    &__range {
+      padding: 13px 35px;
+    }
+    &__range-sum,
+    &__range-line {
+      li {
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+    &__range-sum {
+      padding-left: 18px;
+    }
+    &__cur {
+      margin-bottom: 29px;
+      &::after {
+        top: 12px;
+      }
+    }
+    &__currency {
+      width: 180px;
+      height: 42px;
+      padding-left: 5px;
+    }
+    &__inputs {
+      margin-bottom: 27px;
+    }
+    &__button {
+      margin-left: 2px;
+    }
+    &__share {
+      margin-left: 0px;
+    }
+  }
+  .active-range-line {
+    transform: translate(269px);
+  }
+}
+@media screen and (max-width: 639px) {
+  .donate-info {
+    padding-bottom: 20px;
+    &__title-amount,
+    &__range,
+    &__range-sum {
+      width: 300px;
+    }
+    &__title-donate,
+    &__pick-title {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &__pick-title {
+      margin-bottom: 11px;
+    }
+    &__block {
+      padding: 19px 0px 19px 0px;
+    }
+    &__know {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__panda {
+      margin: 0 auto;
+      margin-top: 36px;
+      padding-right: 9px;
+      margin-bottom: 5px;
+      img {
+        max-width: 151px;
+      }
+    }
+    &__title-amount {
+      padding-left: 0px;
+      margin-bottom: 9px;
+    }
+    &__amount {
+      p {
+        font-size: 40.6015px;
+        line-height: 32px;
+        margin-bottom: 0px;
+      }
+      span {
+        font-size: 9.02255px;
+        line-height: 13px;
+        max-width: fit-content;
+      }
+    }
+    &__cross {
+      margin: 0 36px 9px 6px;
+      width: 8px;
+      height: 8px;
+    }
+    &__range {
+      padding: 6px 16px;
+      margin-bottom: 6px;
+    }
+    &__range-line {
+      li {
+        width: 5px;
+        height: 5px;
+      }
+    }
+    &__range-sum {
+      padding-left: 8px;
+      padding-right: 3px;
+      margin-bottom: 25px;
+      li {
+        font-size: 13px;
+        line-height: 18px;
+        padding-left: 6px;
+        width: 28px;
+        &::before {
+          width: 5px;
+          height: 10px;
+          background-size: cover;
+          top: 4px;
+        }
+      }
+      .active-range-text {
+        &::before {
+          width: 5px !important;
+          height: 10px !important;
+          background-size: cover;
+        }
+      }
+    }
+    &__cur {
+      margin-bottom: 23px;
+    }
+    &__radio {
+      margin-right: 20px;
+    }
+    &__inputs {
+      margin-bottom: 25px;
+    }
+    &__share {
+      white-space: nowrap;
+    }
+  }
+
+  .active-range-line {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    top: -3px;
+    transform: translate(129px);
   }
 }
