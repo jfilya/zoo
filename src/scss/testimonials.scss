@@ -1,7 +1,7 @@
 @import "./mixin.scss";
 .testimonials {
   padding: 140px 0 180px 0;
-  background: url(../img/leav_foto.png) right  bottom  no-repeat;
+  background: url(../images/img/leav_foto.png) right  bottom  no-repeat;
   background-size: auto, cover;
   &__container {
     overflow: hidden;
@@ -14,6 +14,7 @@
     margin-bottom: 47px;
   }
   &__border {
+    cursor:pointer;
     background: linear-gradient(
         315.75deg,
         rgba(254, 189, 171, 0.74) 30.06%,
@@ -38,6 +39,7 @@
     width: 100%;
     display: inline-flex;
     margin-bottom: 21px;
+    transition: 0.5s;
   }
   &__item {
     width: 264px;
@@ -94,11 +96,15 @@
     background: #f5f7f6;
     border-radius: 5px;
     display: flex;
-    &_active {
-      background: #fe9013;
-      border-radius: 5px;
+    justify-content: space-between;
+    li {
+      cursor:pointer;
       width: 115.19px;
       height: 6px;
+      border-radius: 5px;
+    }
+    &_active {
+      background: #fe9013;
     }
   }
   &__btn {

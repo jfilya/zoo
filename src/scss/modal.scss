@@ -1,0 +1,30 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: #000000b0;
+    z-index: 2;
+    visibility: hidden;
+    top:0;
+    cursor:pointer;
+}
+.overlayActive {
+    visibility: visible;
+}
+.modal {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    &__border{
+        margin-right: 0px;
+    }
+    &__item {
+        width: 264px;
+        height: 387px;
+    }
+    &__text {
+        height: 324px;
+    }
+}

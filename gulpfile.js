@@ -41,6 +41,7 @@ function styles() {
     "src/scss/testimonials.scss",
     "src/scss/footer.scss",
     "src/scss/donate-info.scss",
+    "src/scss/modal.scss",
   ])
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(concat("style.min.css"))

@@ -8,6 +8,12 @@ const menuBurger = () => {
         copyright.classList.toggle("active-menu");
         menu.classList.toggle("active-burger");
         header.classList.toggle("active-header");
+        if(header.classList.contains("active-header")){
+          (document.querySelector('#bamboo') as HTMLImageElement).src = 'images/svg/bamboo-active.svg';  
+        }
+        else {
+            (document.querySelector('#bamboo') as HTMLImageElement).src = 'images/svg/bamboo.svg'; 
+        }
     })
 }
 
