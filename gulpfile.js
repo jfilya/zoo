@@ -10,7 +10,7 @@ const sync = require("browser-sync").create();
 const ts = require("gulp-typescript");
 
 function scripts() {
-  src("src/**/*.ts")
+  return src("src/ts/**/*.ts")
     .pipe(
       ts({
         noImplicitAny: true,
@@ -71,18 +71,26 @@ function images() {
         }),
       ])
     )
-    .pipe(dest("dist/img"));
+    .pipe(dest("dist/images/img"));
 }
 
 function build() {
-  return src(["src/css/style.min.css", "src/js/main.min.js", "src/*.html"], {
-    base: "app",
-  }).pipe(dest("dist"));
+  return src(
+    [
+      "src/css/style.min.css",
+      "src/js/main.min.js",
+      "src/*.html",
+      "src/images/svg/**/*",
+    ],
+    {
+      base: "src",
+    }
+  ).pipe(dest("dist"));
 }
 
 function watching() {
   watch(["src/scss/**/*.scss"], styles);
-  watch(["src/js/**/*.js", "!src/js/main.min.js"], scripts);
+  watch(["src/ts/**/*.ts"], scripts);
   watch(["src/*.html"]).on("change", sync.reload);
 }
 exports.styles = styles;
