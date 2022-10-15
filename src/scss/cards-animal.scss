@@ -35,8 +35,10 @@
   }
   &__img {
     display: flex;
-    width: 364px;
+    width: 100%;
     transition: 0.5s;
+    height: 364px;
+    object-fit: cover;
   }
 
   &__bottom {
