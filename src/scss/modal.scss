@@ -1,30 +1,66 @@
 .overlay {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: #000000b0;
-    z-index: 2;
-    visibility: hidden;
-    top:0;
-    cursor:pointer;
+  width: 100vw;
+  min-width: 320px;
+  height: 100vh;
+  min-height: 100%;
+  position: fixed;
+  background: #000000b0;
+  z-index: 2;
+  visibility: collapse;
+  top: 0;
+  z-index: 4;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.2s;
 }
 .overlayActive {
-    visibility: visible;
+  visibility: visible;
+  opacity: 1;
 }
 .modal {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    z-index: 6;
-    &__border{
-        margin-right: 0px;
+  position: fixed;
+  opacity: 0;
+  transition: 0.2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  .testimonials__border {
+    margin-right: 0px;
+  }
+  .testimonials__item {
+    width: 289px;
+    padding-right: 20px;
+    height: 387px;
+  }
+  .testimonials__text {
+    height: 305px;
+    overflow-x: scroll;
+  }
+  .testimonials__text::-webkit-scrollbar {
+    width: 2px;
+    height: 0px;
+    background-color: transparent;
+  }
+  .testimonials__text::-webkit-scrollbar-thumb {
+    background-color: #858585;
+    border-radius: 9em;
+  }
+  &__cross {
+    position: absolute;
+    right: -20px;
+    top: -5px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 350px) {
+  .modal {
+    .testimonials__item {
+      width: 250px;
     }
-    &__item {
-        width: 264px;
-        height: 387px;
-    }
-    &__text {
-        height: 324px;
-    }
+  }
+}
+
+.activeModal {
+  opacity: 1;
 }
