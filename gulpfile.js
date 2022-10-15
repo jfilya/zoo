@@ -81,6 +81,7 @@ function build() {
       "src/js/main.min.js",
       "src/*.html",
       "src/images/svg/**/*",
+      "src/php/*.php",
     ],
     {
       base: "src",
@@ -91,6 +92,7 @@ function build() {
 function watching() {
   watch(["src/scss/**/*.scss"], styles);
   watch(["src/ts/**/*.ts"], scripts);
+  watch(["src/php/*.php"])
   watch(["src/*.html"]).on("change", sync.reload);
 }
 exports.styles = styles;

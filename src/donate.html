@@ -20,7 +20,12 @@
         <nav class="header__navigation">
           <a href="index.html" class="header__logo"
             ><h1>PetStory online</h1>
-            <img src="images/svg/bamboo.svg" alt="bamboo" id="bamboo" class="bamboo"/>
+            <img
+              src="images/svg/bamboo.svg"
+              alt="bamboo"
+              id="bamboo"
+              class="bamboo"
+            />
           </a>
           <ul class="header__list">
             <li class="header__element">
@@ -96,11 +101,10 @@
             <img src="images/svg/panda.svg" alt="panda" />
           </div>
           <h5 class="donate-info__title-amount">Amount</h5>
-          <form action="send.php" method="post">
+          <form action="php/send.php" method="POST">
             <div class="donate-info__range-block">
               <div class="donate-info__range">
-                <div id="active-range-line" class="transforms-5">
-                </div>
+                <div id="active-range-line" class="transforms-5"></div>
                 <ul class="donate-info__range-line">
                   <li></li>
                   <li></li>
@@ -128,6 +132,7 @@
                     class="donate-info__currency"
                     type="text"
                     placeholder="Another amount"
+                    name="currency"
                     required
                   />
                 </div>
