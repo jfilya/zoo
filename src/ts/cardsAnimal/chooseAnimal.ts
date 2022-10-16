@@ -27,7 +27,13 @@ class ChooseAnimal {
     let btnNext = document.querySelector('.cards__arrow_right') as HTMLButtonElement;
     let tablePagination = document.querySelector('.cards__items') as HTMLDivElement;
     let pagination = document.querySelector('.cards__pagination') as HTMLUListElement;
-    let notesOnPage: number = 6;
+    let notesOnPage = 0;
+    if(window.innerWidth > 1000){
+      notesOnPage = 6;
+    }
+    if(window.innerWidth <= 1000){
+      notesOnPage = 4;
+    }
     const countOfItem: number = Math.ceil(this.animal.length / notesOnPage);
     for (let i = 1; i <= countOfItem; i++) {
       const li = document.createElement('li') as HTMLElement;

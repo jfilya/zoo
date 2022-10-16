@@ -12,13 +12,12 @@
   padding-bottom: 100px;
   &__items {
     padding-top: 11px;
-    justify-content: center;
+    @include stretch(center, center);
     display: grid;
     grid-template-columns: repeat(3, 366px);
     grid-template-rows: repeat(2, 426px);
     grid-column-gap: 30px;
     grid-row-gap: 21px;
-    align-items: center;
     padding-bottom: 80px;
     margin-right: 2px;
   }
