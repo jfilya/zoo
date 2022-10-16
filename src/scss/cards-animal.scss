@@ -1,7 +1,8 @@
-@import './mixin.scss';
-@import './colors.scss';
+@import "./mixin.scss";
+@import "./colors.scss";
 .cards {
-  background: url(../images/img/palm_foto.png) left -589px bottom -207px no-repeat,
+  background: url(../images/img/palm_foto.png) left -589px bottom -207px
+      no-repeat,
     url(../images/img/strelitzia.png) right bottom no-repeat;
   background-size: auto, auto, cover;
 
@@ -26,6 +27,7 @@
     border: 1px solid $border;
     overflow: hidden;
     transition: 0.5s;
+    animation: 0.5s show ease;
     &:hover {
       box-shadow: 0px 2px 35px 14px rgb(13 13 13 / 4%);
       .cards__img {
@@ -50,19 +52,24 @@
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-    color:#000000;
+    color: #000000;
   }
   &__country {
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
-    color:#000000;
+    color: #000000;
   }
   &__button {
     @include stretch(center, auto);
   }
   &__btn {
     @include btn;
+  }
+  &__pagination {
+    li {
+      display: none;
+    }
   }
   &__arrow {
     width: 62px;
@@ -77,8 +84,11 @@
     &:hover {
       background: $hover;
     }
-    &:active{
+    &:active {
       background: $active;
+    }
+    &:disabled {
+      background: #828282;
     }
     &_left {
       left: -62px;
@@ -91,7 +101,8 @@
 @media screen and (max-width: 1599px) {
   .cards {
     padding-bottom: 140px;
-    background: url(../images/img/palm_foto.png) left -193px bottom -91px no-repeat,
+    background: url(../images/img/palm_foto.png) left -193px bottom -91px
+        no-repeat,
       url(../images/img/strelitzia.png) right bottom no-repeat;
     background-size: 386px, 24%;
 
@@ -128,7 +139,8 @@
     padding-top: 35px;
     position: relative;
     padding-bottom: 100px;
-    background: url(../images/img/palm_foto.png) left -252px bottom -91px no-repeat,
+    background: url(../images/img/palm_foto.png) left -252px bottom -91px
+        no-repeat,
       url(../images/img/strelitzia.png) right bottom no-repeat;
     background-size: 386px, 175px;
     &::before {
@@ -197,7 +209,8 @@
   .cards {
     padding-top: 0;
     padding-bottom: 60px;
-    background: url(../images/img/palm_foto.png) left -80px bottom -32px no-repeat,
+    background: url(../images/img/palm_foto.png) left -80px bottom -32px
+        no-repeat,
       url(../images/img/strelitzia.png) right -16px bottom no-repeat;
     background-size: 138px, 85px;
     &::before {
@@ -221,5 +234,13 @@
     &__arrow {
       display: none;
     }
+  }
+}
+@keyframes show {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
   }
 }
