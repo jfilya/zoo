@@ -3,11 +3,13 @@ const menuBurger = () => {
     const nav = document.querySelector(".header__list") as HTMLDivElement;
     const copyright = document.querySelector(".header__copyright") as HTMLDivElement;
     const header = document.querySelector(".header") as HTMLDivElement;
+    const overlayMenu = document.querySelector(".overlay") as HTMLDivElement;
     menu.addEventListener("click", () => {
         nav.classList.toggle("active-menu");
         copyright.classList.toggle("active-menu");
         menu.classList.toggle("active-burger");
         header.classList.toggle("active-header");
+        overlayMenu.classList.toggle("overlayActive");
         if(header.classList.contains("active-header")){
           (document.querySelector('#bamboo') as HTMLImageElement).src = 'images/svg/bamboo-active.svg';  
         }

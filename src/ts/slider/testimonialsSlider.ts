@@ -21,12 +21,24 @@ class SliderTestimonials {
   </div>
   </div>`
   }
+  buildPgination(): string {
+    return `
+    <ul class="testimonials__scrollbar">
+      <li class="testimonials__scrollbar_active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>`
+  }
   buildTestimonial(): void {
     const testimonialsSlider = document.querySelector('.testimonials__slider') as HTMLDivElement;
+    const testimonialsScroll = document.querySelector('.testimonials__scroll') as HTMLDivElement;
     if (testimonialsSlider) {
       testimonialsSlider.innerHTML = ``;
       for (const test of this.testimonials) {
         testimonialsSlider.innerHTML += this.generate(test);
+        testimonialsScroll.innerHTML = this.buildPgination();
       }
     }
   }
@@ -41,7 +53,6 @@ class SliderTestimonials {
       })
     }
   }
-
   modalWindow(index: number): void {
     const overlay = document.querySelector('.overlay') as HTMLDivElement;
     overlay.classList.add('overlayActive');
@@ -64,31 +75,37 @@ class SliderTestimonials {
   slider(): void {
     if (window.innerWidth >= 1000) {
       let switchDot: number;
-      const go = () => {
-        if (window.innerWidth >= 1600) {
-          switchDot = -298;
+      if (window.innerWidth >= 1600) {
+        switchDot = -298;
+      }
+      if (window.innerWidth >= 1000 && window.innerWidth < 1600) {
+        switchDot = -323;
+      }
+
+      const sliderDots = document.querySelectorAll('.testimonials__scrollbar li') as unknown as HTMLDivElement[];
+      sliderDots.forEach((s, i, array) => {
+        const changeLocation = () => {
+          array.forEach(el => {
+            el.classList.remove('testimonials__scrollbar_active')
+          })
+          s.classList.add('testimonials__scrollbar_active');
+          (document.querySelector('.testimonials__slider') as HTMLDivElement).style.marginLeft = `${switchDot * i}px`
         }
-        if (window.innerWidth >= 1000 && window.innerWidth < 1600) {
-          switchDot = -323;
+        s.onclick = () => {
+          changeLocation();
         }
 
-        const sliderDots = document.querySelectorAll('.testimonials__scrollbar li') as unknown as HTMLDivElement[];
-        sliderDots.forEach((s, i, array) => {
-          s.onclick = () => {
-            array.forEach(el => {
-              el.classList.remove('testimonials__scrollbar_active')
-            })
-            s.classList.add('testimonials__scrollbar_active');
-            (document.querySelector('.testimonials__slider') as HTMLDivElement).style.marginLeft = `${switchDot * i}px`
-          }
-        })
-      }
-      go();
-      window.addEventListener("resize", go);
+      })
     }
   }
 }
 const t = new SliderTestimonials();
-t.buildTestimonial();
+const go = () => {
+  t.buildTestimonial();
+  t.slider();
+  (document.querySelector('.testimonials__slider') as HTMLDivElement).style.marginLeft = '0px';
+}
+go();
+window.addEventListener("resize", go);
 t.modalWindowOpen();
-t.slider();
+t.buildPgination();

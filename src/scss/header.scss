@@ -129,6 +129,7 @@
   }
   .active-header {
     background: #ffffff;
+    z-index: 5;
     .header {
       &__logo {
         z-index: 6;
