@@ -22,56 +22,59 @@ class ChooseAnimal {
       }
     }
   }
-  pagination(): void {
+  paginations(): void {
     let btnPrev = document.querySelector('.cards__arrow_left') as HTMLButtonElement;
     let btnNext = document.querySelector('.cards__arrow_right') as HTMLButtonElement;
     let tablePagination = document.querySelector('.cards__items') as HTMLDivElement;
     let pagination = document.querySelector('.cards__pagination') as HTMLUListElement;
-    let notesOnPage = 0;
-    if(window.innerWidth > 1000){
-      notesOnPage = 6;
-    }
-    if(window.innerWidth <= 1000){
-      notesOnPage = 4;
-    }
-    const countOfItem: number = Math.ceil(this.animal.length / notesOnPage);
-    for (let i = 1; i <= countOfItem; i++) {
-      const li = document.createElement('li') as HTMLElement;
-      li.innerText = String(i);
-      pagination.append(li);
-    }
-    let items = document.querySelectorAll('.cards__pagination li') as unknown as HTMLLIElement[];
-    const showPage = (item: HTMLElement) => {
-      let pageNum = +item.innerHTML;
-      let start = (pageNum - 1) * notesOnPage;
-      let end = start + notesOnPage;
-      let notes = this.animal.slice(start, end);
-      tablePagination.innerHTML = '';
-      this.buildCards(notes);
-    }
-    showPage(items[0]);
-    let i = 0;
+    if (pagination) {
 
-    const disableBtn = (i: number) => {
-      if (i === countOfItem - 1) {
-        btnNext.disabled = true;
-      } else  btnNext.disabled = false;
-      if (i === 0) {
-        btnPrev.disabled = true;
-      } else btnPrev.disabled = false;
-    };
+      let notesOnPage = 0;
+      if (window.innerWidth > 1000) {
+        notesOnPage = 6;
+      }
+      if (window.innerWidth <= 1000) {
+        notesOnPage = 4;
+      }
+      const countOfItem: number = Math.ceil(this.animal.length / notesOnPage);
+      for (let i = 1; i <= countOfItem; i++) {
+        const li = document.createElement('li') as HTMLElement;
+        li.innerText = String(i);
+        pagination.append(li);
+      }
+      let items = document.querySelectorAll('.cards__pagination li') as unknown as HTMLLIElement[];
+      const showPage = (item: HTMLElement) => {
+        let pageNum = +item.innerHTML;
+        let start = (pageNum - 1) * notesOnPage;
+        let end = start + notesOnPage;
+        let notes = this.animal.slice(start, end);
+        tablePagination.innerHTML = '';
+        this.buildCards(notes);
+      }
+      showPage(items[0]);
+      let i = 0;
 
-    btnNext.addEventListener('click', () => {
-      i++;
-      disableBtn(i);
-      showPage(items[i]);
-    })
-    btnPrev.addEventListener('click', () => {
-      i--;
-      disableBtn(i);
-      showPage(items[i]);
-    });
+      const disableBtn = (i: number) => {
+        if (i === countOfItem - 1) {
+          btnNext.disabled = true;
+        } else btnNext.disabled = false;
+        if (i === 0) {
+          btnPrev.disabled = true;
+        } else btnPrev.disabled = false;
+      };
+
+      btnNext.addEventListener('click', () => {
+        i++;
+        disableBtn(i);
+        showPage(items[i]);
+      })
+      btnPrev.addEventListener('click', () => {
+        i--;
+        disableBtn(i);
+        showPage(items[i]);
+      });
+    }
   }
 }
 const animal = new ChooseAnimal();
-animal.pagination();
+animal.paginations();

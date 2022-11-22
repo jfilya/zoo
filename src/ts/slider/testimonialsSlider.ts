@@ -83,13 +83,15 @@ class SliderTestimonials {
       }
 
       const sliderDots = document.querySelectorAll('.testimonials__scrollbar li') as unknown as HTMLDivElement[];
+      const sliderElement = document.querySelector(".testimonials__slider") as HTMLDivElement;
       sliderDots.forEach((s, i, array) => {
         const changeLocation = () => {
           array.forEach(el => {
             el.classList.remove('testimonials__scrollbar_active')
           })
           s.classList.add('testimonials__scrollbar_active');
-          (document.querySelector('.testimonials__slider') as HTMLDivElement).style.marginLeft = `${switchDot * i}px`
+
+          sliderElement ? sliderElement.style.marginLeft = `${switchDot * i}px` : null;
         }
         s.onclick = () => {
           changeLocation();
@@ -103,7 +105,10 @@ const t = new SliderTestimonials();
 const go = () => {
   t.buildTestimonial();
   t.slider();
-  (document.querySelector('.testimonials__slider') as HTMLDivElement).style.marginLeft = '0px';
+  if (document.querySelector('.testimonials__slider') as HTMLDivElement) {
+    (document.querySelector('.testimonials__slider') as HTMLDivElement).style.marginLeft = '0px';
+  }
+
 }
 go();
 window.addEventListener("resize", go);
